@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔐 Surprise Admin</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  font-family:Georgia,"Times New Roman",serif;
+  background:linear-gradient(135deg,#ffd6e7,#ead8ff,#d7efff);
+  color:#4b3653;
+}
+.card{
+  width:min(760px,95vw);
+  background:rgba(255,255,255,.82);
+  border-radius:28px;
+  padding:30px;
+  box-shadow:0 20px 60px rgba(80,50,90,.2);
+  backdrop-filter:blur(12px);
+}
+h1{text-align:center;color:#8b557c}
+.subtitle{text-align:center;margin-bottom:25px}
+input{
+  width:100%;
+  padding:14px;
+  border:1px solid #e2b8d1;
+  border-radius:12px;
+  font-size:16px;
+  margin:8px 0 12px;
+}
+button{
+  width:100%;
+  border:0;
+  border-radius:999px;
+  padding:14px;
+  background:#b86fa7;
+  color:white;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+}
+#error{color:#a33;text-align:center;margin:10px 0;display:none}
+#adminContent{display:none}
+.letter{
+  background:#fffdf8;
+  padding:28px;
+  border-radius:12px;
+  margin-top:20px;
+  line-height:1.8;
+  box-shadow:0 8px 25px rgba(80,50,90,.12);
+}
+.letter h2{text-align:center;color:#9a5c83}
+.back{
+  display:block;
+  text-align:center;
+  margin-top:20px;
+  color:#8b557c;
+  text-decoration:none;
+}
+.warning{
+  margin-top:18px;
+  padding:12px;
+  border-radius:12px;
+  background:#fff0f5;
+  font-size:13px;
+  line-height:1.5;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div id="login">
+    <h1>🔐 Surprise Admin</h1>
+    <p class="subtitle">Private preview of the birthday message 💗</p>
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter admin password"
+      onkeydown="if(event.key==='Enter') login()"
+    >
+
+    <button onclick="login()">Open Admin 💌</button>
+
+    <p id="error">Incorrect password.</p>
+
+    <div class="warning">
+      Note: this is a simple GitHub Pages preview lock, not a secure
+      server-side admin system. The message is still part of the public
+      website's files, so this should not be used for truly private data.
+    </div>
+  </div>
+
+  <div id="adminContent">
+    <h1>💌 Surprise Message</h1>
+    <p class="subtitle">Admin preview</p>
+
+    <div class="letter">
+      <h2>For Mestizang Isay 💗</h2>
+
+      <p>Hello, Mestizang Isay! 💗</p>
+
+      <p>
+        Happy birthday! 🎂✨ I hope today gives you a reason to pause,
+        forget your worries for a while, and simply enjoy how special
+        this day is. You deserve to be surrounded by happiness, genuine
+        smiles, good memories, and people who truly appreciate having
+        you in their lives.
+      </p>
+
+      <p>
+        Life isn't always perfect. There will be difficult days,
+        unexpected problems, and moments when things don't go the way
+        we hoped. But I hope you never let those moments define you.
+        Some things are better left behind, while some lessons are
+        worth carrying forward.
+      </p>
+
+      <p>
+        Take care of yourself, too. Give yourself the same kindness
+        you give to other people. You don't have to be perfect, and
+        you don't need to have everything figured out right away.
+      </p>
+
+      <p>
+        I hope the things you've been praying for and waiting for come
+        at the right time. Trust God's timing, even when the waiting
+        feels long. Sometimes the best things take a little longer
+        than we expect. ✨
+      </p>
+
+      <p>
+        And honestly, I'm grateful that I got the chance to know you.
+        Out of all the people we meet in life, there are certain ones
+        who somehow become a little more memorable than the rest.
+        Sometimes you don't even notice when it happens. They simply
+        become someone you enjoy talking to, someone you remember,
+        and someone whose happiness you quietly wish for.
+      </p>
+
+      <p>I guess you're one of those people. 💗</p>
+
+      <p>
+        I made this little website as a special birthday surprise for
+        you. It may be simple, but I put some time and thought into it
+        because I wanted your birthday to have one more small memory
+        attached to it.
+      </p>
+
+      <p>
+        I hope you always remember that there are people who believe
+        in you, care about you, and genuinely wish good things for you.
+        Even on days when you don't feel your best, I hope you remember
+        that you are appreciated.
+      </p>
+
+      <p>
+        As you begin another chapter, I hope it brings you more reasons
+        to smile, more genuine happiness, more moments worth remembering,
+        and more opportunities to become the person you want to be.
+        Don't rush yourself. Your story is still unfolding.
+      </p>
+
+      <p>
+        And if someday you look back at this birthday, I hope this
+        little message becomes one of those small memories that makes
+        you smile.
+      </p>
+
+      <p>
+        You deserve good things, beautiful memories, and a future that
+        makes all the waiting worth it. ✨
+      </p>
+
+      <p>
+        <strong>One last birthday wish 🎀</strong><br>
+        May this year be gentle with you, full of meaningful moments,
+        and filled with reasons to be grateful. Keep smiling, keep
+        growing, and keep being yourself. 💗
+      </p>
+
+      <p style="text-align:right;font-style:italic">
+        Happy Birthday, Mestizang Isay! 🎂💗✨<br>
+        Enjoy your day, birthday girl. 🎀
+      </p>
+    </div>
+
+    <a class="back" href="index.html">← Back to birthday website</a>
+  </div>
+</div>
+
+<script>
+/*
+  CHANGE THIS PASSWORD before publishing if you want a different one.
+  This is client-side protection only and is NOT a secure password system.
+*/
+const ADMIN_PASSWORD = "IsayAdmin2026";
+
+function login(){
+  const entered = document.getElementById("password").value;
+  const error = document.getElementById("error");
+
+  if(entered === ADMIN_PASSWORD){
+    document.getElementById("login").style.display = "none";
+    document.getElementById("adminContent").style.display = "block";
+  }else{
+    error.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
